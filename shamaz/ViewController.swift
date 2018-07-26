@@ -9,19 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //-------------Referencing the Buttons
+    
+    @IBOutlet weak var past: UIButton!
+    @IBOutlet weak var future: UIButton!
+    @IBOutlet weak var whosNext: UIButton!
+    
+    @IBOutlet weak var textField: UILabel!
+    
+    
     var randomPlayerNumber : Int = 0
     let myWhiteColor = UIColor(
         white: 1.0, alpha: 0.8)
     let myColor = UIColor(red:0.43, green:0.56, blue:0.75, alpha:1.0)
-    let futureArray = ["What would you like to be doing a month from now?","What would you like to be doing 2 weeks from now?","What would you like to be doing 3 days from now?"]
+    let futureArray = [" What would you like to be doing a month from now?"," What would you like to be doing 2 weeks from now? "," What would you like to be doing 3 days from now? "]
     let pastExperiences = ["what did you do last week?", "what did you do yesterday", "What did you do last monday","What did you do last weekend"]
 
-    @IBOutlet weak var textField: UILabel!
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-     
+        past.layer.cornerRadius = 10;
+        future.layer.cornerRadius = 10;
+        whosNext.layer.cornerRadius = 10;
+        textField.layer.masksToBounds = true
+        textField.layer.cornerRadius = 35;
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,18 +43,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 //-------------Referencing the Buttons
-    
-    @IBOutlet weak var past: UIButton!
-    @IBOutlet weak var future: UIButton!
-    @IBOutlet weak var whosNext: UIButton!
-    
-    
-    
-    
-    
-    
-    
-    
     
     @IBAction func whosNext(_ sender: UIButton) {
         
@@ -58,9 +60,13 @@ class ViewController: UIViewController {
         future.isEnabled = true
         
         
+        
 }
     
     @IBAction func pastExperience(_ sender: UIButton) {
+        
+        
+        
         textField.text =  pastExperiences[Int(arc4random_uniform(UInt32(pastExperiences.count)))]
         textField.font =  UIFont(name: "HelveticaNeue-UltraLight", size: 40 )
         textField.textAlignment = .center
@@ -72,7 +78,7 @@ class ViewController: UIViewController {
         whosNext.isEnabled = true
         whosNext.shake()
         future.backgroundColor = UIColorFromHex(rgbValue: 0x495B48,alpha: 1);
-        future.isEnabled = true
+        future.isEnabled = false
         future.shake()
         sender.isEnabled = false
     }
@@ -89,7 +95,7 @@ class ViewController: UIViewController {
         whosNext.shake()
         past.shake()
         past.backgroundColor = UIColorFromHex(rgbValue: 0x7971EA,alpha: 1);
-        past.isEnabled = true
+        past.isEnabled = false
         sender.isEnabled = false
         
     }
@@ -120,7 +126,7 @@ class ViewController: UIViewController {
         let red = CGFloat(drand48())
         let green = CGFloat(drand48())
         let blue = CGFloat(drand48())
-        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        return UIColor(red: red, green: green, blue: blue, alpha: 0.2)
     }
     //---------- color--------------------------------
     func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {

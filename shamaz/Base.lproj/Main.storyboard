@@ -18,66 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LETS PLAY" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcL-oF-gWN">
-                                <rect key="frame" x="41" y="126" width="298" height="217"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" LETS PLAY " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcL-oF-gWN">
+                                <rect key="frame" x="36" y="75" width="301" height="271"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="2pe-SL-Zi7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
                                 <color key="textColor" red="0.47450980392156861" green="0.44313725490196076" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K53-ol-gLy" userLabel="buttonsContainer">
-                                <rect key="frame" x="97" y="376" width="196" height="299"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="dlR-as-CpC">
+                                <rect key="frame" x="90" y="569" width="195" height="151"/>
                                 <subviews>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-AK-ccb">
-                                        <rect key="frame" x="39" y="0.0" width="109" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-AK-ccb">
+                                        <rect key="frame" x="61" y="0.0" width="73" height="43"/>
                                         <color key="backgroundColor" red="0.47450980392156861" green="0.44313725490196076" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
-                                        <state key="normal" title="PAST">
+                                        <state key="normal" title=" PAST ">
                                             <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="pastExperience:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgg-zF-Xf9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-u1-9hf">
-                                        <rect key="frame" x="9" y="145" width="168" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.27450980392156865" green="0.16078431372549018" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
-                                        <state key="normal" title="Who's Next">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="whosNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nl9-0B-gJV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twc-b5-UOQ">
-                                        <rect key="frame" x="23" y="73" width="141" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twc-b5-UOQ">
+                                        <rect key="frame" x="43.666666666666657" y="54" width="108" height="43"/>
                                         <color key="backgroundColor" red="0.28627450980392155" green="0.35686274509803922" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
-                                        <state key="normal" title="FUTURE">
+                                        <state key="normal" title=" FUTURE ">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="futurePlan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X35-tM-ctV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-u1-9hf">
+                                        <rect key="frame" x="27.666666666666671" y="108" width="140" height="43"/>
+                                        <color key="backgroundColor" red="0.27450980392156865" green="0.16078431372549018" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
+                                        <state key="normal" title=" Who's Next ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="whosNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nl9-0B-gJV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.17254901960784313" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BcL-oF-gWN" secondAttribute="trailing" constant="36" id="1yw-Fd-itW"/>
-                            <constraint firstItem="BcL-oF-gWN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="82" id="AHv-pb-oiq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K53-ol-gLy" secondAttribute="bottom" constant="103" id="N6E-en-eKo"/>
-                            <constraint firstItem="K53-ol-gLy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="376" id="XM8-ca-pfm"/>
-                            <constraint firstItem="K53-ol-gLy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="Ybv-8i-COO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K53-ol-gLy" secondAttribute="trailing" constant="82" id="d63-1b-qoh"/>
-                            <constraint firstItem="BcL-oF-gWN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="lQl-dw-wxt"/>
-                            <constraint firstItem="K53-ol-gLy" firstAttribute="top" secondItem="BcL-oF-gWN" secondAttribute="bottom" constant="33" id="lwq-oz-FU3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dlR-as-CpC" secondAttribute="bottom" constant="58" id="3lB-9G-0fe"/>
+                            <constraint firstItem="dlR-as-CpC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7DC-lJ-rCH"/>
+                            <constraint firstItem="dlR-as-CpC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="Jhb-on-ja9"/>
+                            <constraint firstItem="BcL-oF-gWN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="NIk-kv-RN1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BcL-oF-gWN" secondAttribute="trailing" constant="38" id="W64-TY-mUH"/>
+                            <constraint firstItem="BcL-oF-gWN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="kui-6E-Zmt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -90,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="-269"/>
+            <point key="canvasLocation" x="723.75" y="-785.91549295774644"/>
         </scene>
     </scenes>
 </document>
