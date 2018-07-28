@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -18,7 +19,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UILabel!
     
-    
+    var selectedFileName : String = ""
+    var player: AVAudioPlayer?
+    let soundArray = ["note1","note2","note3"]
+
     var randomPlayerNumber : Int = 0
     let myWhiteColor = UIColor(
         white: 1.0, alpha: 0.8)
@@ -38,25 +42,43 @@ class ViewController: UIViewController {
         
     }
 
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 //-------------Referencing the Buttons
     
+   //----------------give buttons sound
+    
+  
+    @IBAction func notePressed(_ sender: UIButton) {
+        selectedFileName = soundArray[sender.tag - 1]
+        print(selectedFileName)
+        playSound()
+    }
+    
+    
+    
+    
     @IBAction func whosNext(_ sender: UIButton) {
+        
+        
         
         randomPlayerNumber = Int(arc4random_uniform(10)+1)
         randomNumberGenerator()
         randomColorBackGround()
         textFieldStyling()
         textField.textColor = myWhiteColor
-        whosNext.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000,alpha: 0.2);
+        whosNext.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000,alpha: 0.4);
         sender.isEnabled = false
         sender.shake()
         past.backgroundColor = UIColorFromHex(rgbValue: 0x7971EA,alpha: 1);
         past.isEnabled = true
         future.backgroundColor = UIColorFromHex(rgbValue: 0x495B48,alpha: 1);
+        
         future.isEnabled = true
         
         
@@ -73,7 +95,7 @@ class ViewController: UIViewController {
         textField.textColor = myWhiteColor
         textField.backgroundColor = randomColor()
         view.backgroundColor = myColor
-        past.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000,alpha: 0.2);
+        past.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000,alpha: 0.4);
         whosNext.backgroundColor = UIColorFromHex(rgbValue: 0x4629F0,alpha: 1);
         whosNext.isEnabled = true
         whosNext.shake()
@@ -89,7 +111,7 @@ class ViewController: UIViewController {
         textField.backgroundColor = randomColor()
         textField.textAlignment = .center
         view.backgroundColor = myColor
-        future.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000,alpha: 0.2);
+        future.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000,alpha: 0.4);
         whosNext.backgroundColor = UIColorFromHex(rgbValue: 0x4629F0,alpha: 1);
         whosNext.isEnabled = true
         whosNext.shake()
@@ -133,10 +155,26 @@ class ViewController: UIViewController {
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
         let blue = CGFloat(rgbValue & 0xFF)/256.0
-        
+
         return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
     }
     
+    //---------------------------------func to give buttons sound---------------------------
+    func  playSound() {
+        let url = Bundle.main.url(forResource: selectedFileName, withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+            
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+
     
 }
 

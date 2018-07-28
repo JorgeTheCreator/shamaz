@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="shamaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" LETS PLAY " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcL-oF-gWN">
-                                <rect key="frame" x="36" y="75" width="301" height="271"/>
+                                <rect key="frame" x="36" y="51" width="301" height="271"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="271" id="2pe-SL-Zi7"/>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="dlR-as-CpC">
-                                <rect key="frame" x="90" y="569" width="195" height="151"/>
+                                <rect key="frame" x="90" y="458" width="195" height="151"/>
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-AK-ccb">
                                         <rect key="frame" x="61" y="0.0" width="73" height="43"/>
@@ -39,11 +39,12 @@
                                             <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7H-BA-G8u"/>
                                             <action selector="pastExperience:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgg-zF-Xf9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twc-b5-UOQ">
-                                        <rect key="frame" x="43.666666666666657" y="54" width="108" height="43"/>
+                                        <rect key="frame" x="43.5" y="54" width="108" height="43"/>
                                         <color key="backgroundColor" red="0.28627450980392155" green="0.35686274509803922" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
                                         <state key="normal" title=" FUTURE ">
@@ -51,16 +52,18 @@
                                         </state>
                                         <connections>
                                             <action selector="futurePlan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X35-tM-ctV"/>
+                                            <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSo-SB-w2q"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-u1-9hf">
-                                        <rect key="frame" x="27.666666666666671" y="108" width="140" height="43"/>
+                                        <rect key="frame" x="27.5" y="108" width="140" height="43"/>
                                         <color key="backgroundColor" red="0.27450980392156865" green="0.16078431372549018" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
                                         <state key="normal" title=" Who's Next ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="notePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVW-fi-4Jb"/>
                                             <action selector="whosNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nl9-0B-gJV"/>
                                         </connections>
                                     </button>
@@ -87,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="723.75" y="-785.91549295774644"/>
+            <point key="canvasLocation" x="1212" y="-1043"/>
         </scene>
     </scenes>
 </document>

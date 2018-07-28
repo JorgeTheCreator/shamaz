@@ -13,6 +13,10 @@
 		370F1B4A20FEA79B00F003F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370F1B4920FEA79B00F003F0 /* Assets.xcassets */; };
 		370F1B4D20FEA79B00F003F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370F1B4B20FEA79B00F003F0 /* LaunchScreen.storyboard */; };
 		377219212101397600C50CF8 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377219202101397600C50CF8 /* UIButtonExtension.swift */; };
+		3799676C210A8DCE007687CB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799676B210A8DCE007687CB /* Color.swift */; };
+		3799676F210C184F007687CB /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3799676E210C184E007687CB /* note3.wav */; };
+		37996771210C1860007687CB /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 37996770210C1860007687CB /* note1.wav */; };
+		37996773210C186B007687CB /* note2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 37996772210C186B007687CB /* note2.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		370F1B4C20FEA79B00F003F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370F1B4E20FEA79B00F003F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377219202101397600C50CF8 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		3799676B210A8DCE007687CB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3799676E210C184E007687CB /* note3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note3.wav; sourceTree = "<group>"; };
+		37996770210C1860007687CB /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
+		37996772210C186B007687CB /* note2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note2.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		370F1B4120FEA79900F003F0 /* shamaz */ = {
 			isa = PBXGroup;
 			children = (
+				37996776210C19B7007687CB /* Sound FIles */,
 				370F1B4220FEA79900F003F0 /* AppDelegate.swift */,
 				370F1B4420FEA79900F003F0 /* ViewController.swift */,
 				370F1B4620FEA79900F003F0 /* Main.storyboard */,
@@ -63,8 +72,19 @@
 				370F1B4B20FEA79B00F003F0 /* LaunchScreen.storyboard */,
 				370F1B4E20FEA79B00F003F0 /* Info.plist */,
 				377219202101397600C50CF8 /* UIButtonExtension.swift */,
+				3799676B210A8DCE007687CB /* Color.swift */,
 			);
 			path = shamaz;
+			sourceTree = "<group>";
+		};
+		37996776210C19B7007687CB /* Sound FIles */ = {
+			isa = PBXGroup;
+			children = (
+				3799676E210C184E007687CB /* note3.wav */,
+				37996772210C186B007687CB /* note2.wav */,
+				37996770210C1860007687CB /* note1.wav */,
+			);
+			name = "Sound FIles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +147,9 @@
 			files = (
 				370F1B4D20FEA79B00F003F0 /* LaunchScreen.storyboard in Resources */,
 				370F1B4A20FEA79B00F003F0 /* Assets.xcassets in Resources */,
+				3799676F210C184F007687CB /* note3.wav in Resources */,
+				37996773210C186B007687CB /* note2.wav in Resources */,
+				37996771210C1860007687CB /* note1.wav in Resources */,
 				370F1B4820FEA79900F003F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				370F1B4520FEA79900F003F0 /* ViewController.swift in Sources */,
+				3799676C210A8DCE007687CB /* Color.swift in Sources */,
 				370F1B4320FEA79900F003F0 /* AppDelegate.swift in Sources */,
 				377219212101397600C50CF8 /* UIButtonExtension.swift in Sources */,
 			);
