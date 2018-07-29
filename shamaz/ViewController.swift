@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Foundation
 
 class ViewController: UIViewController {
     
@@ -19,18 +20,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UILabel!
     
-    var selectedFileName : String = ""
+    var selectedFileName: String = ""
     var player: AVAudioPlayer?
-    let soundArray = ["note1","note2","note3"]
-
+    let soundArray : Array = ["note1","note2","note3","note4","note5","note6","note7"]
+    
     var randomPlayerNumber : Int = 0
     let myWhiteColor = UIColor(
         white: 1.0, alpha: 0.8)
     let myColor = UIColor(red:0.43, green:0.56, blue:0.75, alpha:1.0)
     let futureArray = [" What would you like to be doing a month from now?"," What would you like to be doing 2 weeks from now? "," What would you like to be doing 3 days from now? "]
     let pastExperiences = ["what did you do last week?", "what did you do yesterday", "What did you do last monday","What did you do last weekend"]
-
-  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
         textField.layer.cornerRadius = 35;
         
     }
-
+    
     
     
     
@@ -49,13 +50,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//-------------Referencing the Buttons
+    //-------------Referencing the Buttons
     
-   //----------------give buttons sound
+    //----------------give buttons sound
     
-  
     @IBAction func notePressed(_ sender: UIButton) {
-        selectedFileName = soundArray[sender.tag - 1]
+        selectedFileName = soundArray[Int(arc4random_uniform(UInt32(7)))]
         print(selectedFileName)
         playSound()
     }
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         
         
         
-}
+    }
     
     @IBAction func pastExperience(_ sender: UIButton) {
         
@@ -98,10 +98,13 @@ class ViewController: UIViewController {
         past.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000,alpha: 0.4);
         whosNext.backgroundColor = UIColorFromHex(rgbValue: 0x4629F0,alpha: 1);
         whosNext.isEnabled = true
-        whosNext.shake()
+        whosNext.flash()
+        
         future.backgroundColor = UIColorFromHex(rgbValue: 0x495B48,alpha: 1);
         future.isEnabled = false
-        future.shake()
+        future.flash()
+        
+        past.pulsate()
         sender.isEnabled = false
     }
     @IBAction func futurePlan(_ sender: UIButton) {
@@ -114,36 +117,37 @@ class ViewController: UIViewController {
         future.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000,alpha: 0.4);
         whosNext.backgroundColor = UIColorFromHex(rgbValue: 0x4629F0,alpha: 1);
         whosNext.isEnabled = true
-        whosNext.shake()
-        past.shake()
+        whosNext.flash()
+        past.flash()
+        future.pulsate()
         past.backgroundColor = UIColorFromHex(rgbValue: 0x7971EA,alpha: 1);
         past.isEnabled = false
         sender.isEnabled = false
         
     }
     
-
- //----------------function---------Random Number Generator---------------------------------
+    
+    //----------------function---------Random Number Generator---------------------------------
     func randomNumberGenerator() {
-      textField.text =  "Player \(randomPlayerNumber)"
+        textField.text =  "Player \(randomPlayerNumber)"
     }
-//----------------function---------Random Background Color  Generator---------------------------------
+    //----------------function---------Random Background Color  Generator---------------------------------
     func randomColorBackGround(){
         view.backgroundColor = randomColor()
     }
- //---------------function--------UI LABEL STYLING--------------------------------
+    //---------------function--------UI LABEL STYLING--------------------------------
     func textFieldStyling(){
-         textField.font =  UIFont(name: "HelveticaNeue-UltraLight", size: 90)
-         textField.textAlignment = .center
-         textField.backgroundColor = randomColor()
+        textField.font =  UIFont(name: "HelveticaNeue-UltraLight", size: 90)
+        textField.textAlignment = .center
+        textField.backgroundColor = randomColor()
         textField.textColor = myWhiteColor
     }
     
     
-
-   
     
-  //-----------------function---------Random color Generator---------------------------------
+    
+    
+    //-----------------function---------Random color Generator---------------------------------
     func randomColor() -> UIColor{
         let red = CGFloat(drand48())
         let green = CGFloat(drand48())
@@ -155,7 +159,7 @@ class ViewController: UIViewController {
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
         let blue = CGFloat(rgbValue & 0xFF)/256.0
-
+        
         return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
     }
     
@@ -174,7 +178,7 @@ class ViewController: UIViewController {
             print(error.description)
         }
     }
-
+    
     
 }
 
